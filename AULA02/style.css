@@ -1,0 +1,181 @@
+/* --- 1. PALETA DE CORES ROCKSTAR VIBRANTE --- */
+:root {
+    --cor-fundo: #0a0a0a; /* Preto Profundo */
+    --cor-acento-ouro: #FFD700; /* Dourado/Amarelo Clássico */
+    --cor-acento-laranja: #FF4500; /* Laranja/Vermelho Intenso */
+    --cor-texto: #f0f0f0;
+    --cor-neon: #00FFFF; /* Ciano Elétrico para detalhes */
+}
+
+/* --- 2. ESTILOS BASE --- */
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: 'Roboto', sans-serif; /* Usando Roboto como um fallback ousado */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+/* --- 3. CABEÇALHO E NAVEGAÇÃO --- */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--cor-acento-ouro);
+}
+
+.cabecalho a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    margin-left: 25px;
+    transition: color 0.3s;
+}
+
+.cabecalho a:hover {
+    color: var(--cor-acento-laranja);
+}
+
+/* --- 4. SEÇÃO DESTAQUE (HERO) COM EFEITO VIBRANTE --- */
+.secao-heroi {
+    min-height: 70vh;
+    background: url('fundo-rockstar.jpg') center center no-repeat; /* Placeholder de fundo */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Efeito de sobreposição escura para destacar o texto */
+    position: relative; 
+}
+
+.secao-heroi::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.conteudo-heroi {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Título com Brilho Neon */
+.secao-heroi h1 {
+    font-size: 4em;
+    color: var(--cor-texto);
+    text-shadow: 0 0 10px var(--cor-neon), 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.btn-acao {
+    background-color: var(--cor-acento-laranja);
+    border: 3px solid var(--cor-acento-ouro);
+    color: var(--cor-fundo);
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-acao:hover {
+    /* Efeito de pulso/brilho ao passar o mouse */
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--cor-acento-ouro), 0 0 40px var(--cor-acento-laranja);
+}
+
+/* --- 5. SEÇÃO DE OFERTAS E CARTÕES --- */
+.secao-ofertas {
+    padding: 80px 50px;
+    text-align: center;
+    background-color: var(--cor-fundo);
+}
+
+.secao-ofertas h2 {
+    font-size: 3em;
+    color: var(--cor-acento-ouro);
+    margin-bottom: 40px;
+}
+
+.grade-ofertas {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Garante que os cartões se ajustem em telas menores */
+}
+
+.cartao-oferta {
+    width: 100%;
+    max-width: 300px;
+    background-color: #1a1a1a;
+    border: 2px solid var(--cor-acento-ouro);
+    padding: 20px;
+    transition: all 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+
+.cartao-oferta:hover {
+    /* Efeito 3D sutil e destaque com sombra Laranja */
+    transform: perspective(1000px) rotateY(3deg) scale(1.05);
+    box-shadow: 0 0 20px var(--cor-acento-laranja);
+    border-color: var(--cor-acento-laranja);
+}
+
+.capa-jogo {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+    transition: transform 0.6s ease-out;
+}
+
+.cartao-oferta:hover .capa-jogo {
+    transform: scale(1.05); /* Zoom sutil na imagem */
+}
+
+/* --- 6. ESTILOS DE PREÇOS VIBRANTES --- */
+.precos {
+    margin: 15px 0;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.preco-antigo {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 0.7em;
+    margin-right: 10px;
+}
+
+.preco-atual {
+    color: var(--cor-acento-ouro); /* Preço atual em OURO */
+    text-shadow: 0 0 5px var(--cor-acento-ouro);
+    display: inline-block; /* Para o efeito de animação no preço */
+}
+
+.desconto {
+    display: inline-block;
+    background-color: var(--cor-acento-laranja);
+    color: var(--cor-fundo);
+    font-size: 0.6em;
+    padding: 5px 10px;
+    margin-left: 10px
