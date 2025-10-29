@@ -1,0 +1,1 @@
+prompt("qual seu peso?")

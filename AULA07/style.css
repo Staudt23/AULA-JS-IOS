@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-image: url(./corrida.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: antiquewhite;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+
+
+.peso {
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.altura {
+    font-size: 20px;
+    color: aliceblue;
+    background-color: aliceblue;
+}
+
